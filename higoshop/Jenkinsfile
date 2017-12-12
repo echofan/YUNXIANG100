@@ -1,0 +1,9 @@
+node {
+   stage('Clone Code') { // for display purposes
+      // Get some code from a GitHub repository
+      git 'git@git.oschina.net:songwenjin_228/higoshop.git'
+   }
+   stage('Build'){
+       bat 'yarn install && yarn run build'
+   }
+}
